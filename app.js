@@ -41,7 +41,7 @@ const translations = {
       'Navegue pelo catálogo e encontre a peça que fala consigo.',
     'encomendar.passo2Titulo': 'Combine no WhatsApp',
     'encomendar.passo2Texto':
-      'Ajustamos cores, tamanhos e detalhes da forma que desejar.',
+      'Cada peça é única — confirmamos os detalhes diretamente consigo.',
     'encomendar.passo3Titulo': 'Envio pelos CTT',
     'encomendar.passo3Texto':
       'Receba em casa, em qualquer ponto de Portugal.',
@@ -92,7 +92,7 @@ const translations = {
       'Browse the catalogue and find the piece that speaks to you.',
     'encomendar.passo2Titulo': 'Arrange on WhatsApp',
     'encomendar.passo2Texto':
-      'We adjust colours, sizes and details the way you want.',
+      'Each piece is unique — we confirm the details directly with you.',
     'encomendar.passo3Titulo': 'Shipped by CTT',
     'encomendar.passo3Texto':
       'Receive it at home, anywhere in Portugal.',
