@@ -26,10 +26,10 @@ const translations = {
     'bolsas.tituloScript': '& Acessórios',
     'bolsas.descricao':
       'Peças sofisticadas em fio de malha e crochê estruturado.',
-    'card.pedir': 'Pedir no WhatsApp',
-    'card.prontaEntrega': 'Pronta Entrega',
-    'card.sobEncomenda': 'Sob Encomenda',
-    'card.msg': 'Olá! Tenho interesse na peça',
+    'card.pedir': 'Reservar no WhatsApp',
+    'card.prontaEntrega': 'Peça Única',
+    'card.sobEncomenda': 'Peça Única',
+    'card.msg': 'Olá! Gostaria de reservar a peça única *{nome}* que vi no site.',
     'sobre.titulo1': 'Sobre o',
     'sobre.titulo2': 'Ateliê',
     'sobre.texto':
@@ -77,10 +77,10 @@ const translations = {
     'bolsas.tituloScript': '& Accessories',
     'bolsas.descricao':
       'Sophisticated pieces in knit yarn and structured crochet.',
-    'card.pedir': 'Order on WhatsApp',
-    'card.prontaEntrega': 'Ready to Ship',
-    'card.sobEncomenda': 'Made to Order',
-    'card.msg': "Hello! I'm interested in the piece",
+    'card.pedir': 'Reserve via WhatsApp',
+    'card.prontaEntrega': 'One of a Kind',
+    'card.sobEncomenda': 'One of a Kind',
+    'card.msg': 'Hello! I would like to reserve the unique piece *{nome}* from your website.',
     'sobre.titulo1': 'About the',
     'sobre.titulo2': 'Studio',
     'sobre.texto':
@@ -141,15 +141,10 @@ function updateLangButtons() {
 }
 
 function badgeFor(status) {
-  const pronto = status === 'ready';
-  const label = pronto ? t('card.prontaEntrega') : t('card.sobEncomenda');
+  const label = t('card.prontaEntrega');
   return `
-    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full ${
-      pronto
-        ? 'bg-emerald-100 text-emerald-700'
-        : 'bg-caramelo/15 text-caramelo'
-    }">
-      <span class="w-1.5 h-1.5 rounded-full ${pronto ? 'bg-emerald-500' : 'bg-caramelo'}"></span>
+    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-caramelo/15 text-caramelo">
+      <span class="w-1.5 h-1.5 rounded-full bg-caramelo"></span>
       ${label}
     </span>`;
 }
@@ -157,7 +152,7 @@ function badgeFor(status) {
 function cardTemplate(produto) {
   const nome = localized(produto.nome);
   const material = localized(produto.material);
-  const mensagem = encodeURIComponent(`${t('card.msg')} ${nome}.`);
+  const mensagem = encodeURIComponent(t('card.msg').replace('{nome}', nome));
   const whatsapp = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensagem}`;
 
   return `
