@@ -1,0 +1,13 @@
+# Ferramentas de AI e Agentes
+.skills/
+.agents/
+AGENTS.md
+skills-lock.json
+
+# Node / CLI
+package-lock.json
+node_modules/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
