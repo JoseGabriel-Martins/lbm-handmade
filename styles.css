@@ -1,0 +1,25 @@
+/* ============================================
+   LBM hand made — estilos base e da marca
+   ============================================ */
+
+:root {
+  --cor-espresso: #261810;
+  --cor-caramelo: #c48b5e;
+  --cor-linho: #faf8f5;
+  --cor-areia: #eae4dc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(196, 139, 94, 0.35);
+  color: var(--cor-espresso);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
