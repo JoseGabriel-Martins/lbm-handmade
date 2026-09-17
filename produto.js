@@ -70,7 +70,6 @@ function crossSellCard(p) {
         <img alt="${nome}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="${p.imagem}" loading="lazy"
              onerror="this.onerror=null; this.src='${IMAGEM_FALLBACK}';" />
         <span class="absolute top-3 left-3 bg-caramelo text-white text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">${t('badge.pecaUnica')}</span>
-        <span class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-espresso text-[11px] font-semibold px-2 py-0.5 rounded-md border border-areia">${t('tag.' + p.categoria)}</span>
       </a>
       <div class="flex-grow flex flex-col justify-between">
         <div>
