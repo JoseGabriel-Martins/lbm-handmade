@@ -25,16 +25,16 @@
         <img src="assets/images/logo.png" alt="LBM hand made" class="h-11 w-auto" />
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-espresso/80">
+      <div class="desktop-nav hidden md:flex items-center gap-8 text-sm font-medium text-espresso/80">
         <a href="#inicio" class="hover:text-caramelo transition-colors" data-i18n="nav.inicio">Início</a>
-        <a href="#amigurumi" class="hover:text-caramelo transition-colors" data-i18n="nav.amigurumi">Amigurumi</a>
-        <a href="#bolsas" class="hover:text-caramelo transition-colors" data-i18n="nav.bolsas">Bolsas</a>
+        <a href="#amigurumi" class="hover:text-caramelo transition-colors" data-i18n="nav.amigurumi" data-nav-categoria="amigurumi">Amigurumi</a>
+        <a href="#bolsas" class="hover:text-caramelo transition-colors" data-i18n="nav.bolsas" data-nav-categoria="bolsas">Bolsas</a>
         <a href="#sobre" class="hover:text-caramelo transition-colors" data-i18n="nav.sobre">Sobre</a>
         <a href="#contato" class="hover:text-caramelo transition-colors" data-i18n="nav.contato">Contato</a>
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3">
-        <div id="lang-switcher" class="hidden sm:flex items-center gap-1 rounded-full border border-areia bg-white/70 p-1">
+        <div id="lang-switcher" class="flex items-center gap-1 rounded-full border border-areia bg-white/70 p-1">
           <button data-lang="pt" class="lang-btn flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full transition-colors" aria-label="Português">
             <span class="text-sm leading-none">🇵🇹</span><span>PT</span>
           </button>
@@ -46,27 +46,19 @@
         <a href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda."
            class="hidden sm:inline-flex items-center gap-2 bg-caramelo text-white text-sm font-semibold px-4 py-2.5 rounded-full hover:bg-espresso transition-colors shadow-sm"
            data-i18n="nav.encomendar">Fazer Encomenda</a>
-      </div>
 
-      <button id="menu-btn" class="md:hidden text-espresso" aria-label="Abrir menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      </button>
+        <button id="menu-btn" class="md:hidden text-espresso p-1.5 rounded-lg hover:bg-areia/40 transition-colors" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden border-t border-areia bg-linho/95 px-4 pb-4 pt-2 flex flex-col gap-1 text-sm font-medium">
+    <div id="mobile-menu" class="mobile-nav hidden md:hidden border-t border-areia bg-linho/95 px-4 pb-4 pt-2 flex flex-col gap-1 text-sm font-medium">
       <a href="#inicio" class="py-2 hover:text-caramelo" data-i18n="nav.inicio">Início</a>
-      <a href="#amigurumi" class="py-2 hover:text-caramelo" data-i18n="nav.amigurumi">Amigurumi</a>
-      <a href="#bolsas" class="py-2 hover:text-caramelo" data-i18n="nav.bolsas">Bolsas</a>
+      <a href="#amigurumi" class="py-2 hover:text-caramelo" data-i18n="nav.amigurumi" data-nav-categoria="amigurumi">Amigurumi</a>
+      <a href="#bolsas" class="py-2 hover:text-caramelo" data-i18n="nav.bolsas" data-nav-categoria="bolsas">Bolsas</a>
       <a href="#sobre" class="py-2 hover:text-caramelo" data-i18n="nav.sobre">Sobre</a>
       <a href="#contato" class="py-2 hover:text-caramelo" data-i18n="nav.contato">Contato</a>
-      <div id="lang-switcher-mobile" class="flex items-center gap-1 rounded-full border border-areia bg-white/70 p-1 w-fit mt-2">
-        <button data-lang="pt" class="lang-btn flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full transition-colors" aria-label="Português">
-          <span class="text-sm leading-none">🇵🇹</span><span>PT</span>
-        </button>
-        <button data-lang="en" class="lang-btn flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full transition-colors" aria-label="English">
-          <span class="text-sm leading-none">🇬🇧</span><span>EN</span>
-        </button>
-      </div>
       <a href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda." class="mt-2 inline-flex items-center justify-center gap-2 bg-caramelo text-white font-semibold px-4 py-2.5 rounded-full" data-i18n="nav.encomendar">Fazer Encomenda</a>
 
       <div class="mt-4 flex items-center justify-center gap-5">
@@ -234,6 +226,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produto — LBM hand made</title>
+  <meta name="description" content="Peça artesanal única feita à mão em Portugal. Reserve diretamente pelo WhatsApp." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-linho text-espresso font-sans antialiased min-h-screen flex flex-col selection:bg-caramelo/20 selection:text-espresso">
+
+  <!-- ===================== NAVBAR (Fiel ao site original) ===================== -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-linho/90 border-b border-areia">
+    <nav aria-label="Navegação principal" class="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
+      <a class="flex flex-col items-start leading-none" href="index.html">
+        <img src="assets/images/logo.png" alt="LBM hand made" class="h-11 w-auto object-contain" />
+      </a>
+
+      <div class="desktop-nav hidden md:flex items-center gap-8 text-sm font-medium text-espresso/80">
+        <a class="hover:text-caramelo transition-colors" href="index.html" data-i18n="nav.inicio">Início</a>
+        <a class="hover:text-caramelo transition-colors" href="index.html#amigurumi" data-i18n="nav.amigurumi" data-nav-categoria="amigurumi">Amigurumi</a>
+        <a class="hover:text-caramelo transition-colors" href="index.html#bolsas" data-i18n="nav.bolsas" data-nav-categoria="bolsas">Bolsas</a>
+        <a class="hover:text-caramelo transition-colors" href="index.html#sobre" data-i18n="nav.sobre">Sobre</a>
+        <a class="hover:text-caramelo transition-colors" href="#contato" data-i18n="nav.contato">Contato</a>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div id="lang-switcher" class="flex items-center gap-1 rounded-full border border-areia bg-white/70 p-1">
+          <button data-lang="pt" class="lang-btn flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full transition-colors" aria-label="Português">
+            <span class="text-sm leading-none">🇵🇹</span><span>PT</span>
+          </button>
+          <button data-lang="en" class="lang-btn flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-full transition-colors" aria-label="English">
+            <span class="text-sm leading-none">🇬🇧</span><span>EN</span>
+          </button>
+        </div>
+
+        <a class="hidden sm:inline-flex items-center gap-2 bg-caramelo text-white text-sm font-semibold px-4 py-2.5 rounded-full hover:bg-caramelo-hover transition-colors shadow-sm" href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda." rel="noopener" target="_blank" data-i18n="nav.encomendar">Fazer Encomenda</a>
+
+        <button aria-label="Abrir menu" class="md:hidden text-espresso p-1.5 rounded-lg hover:bg-areia/40 transition-colors" id="menu-btn">
+          <svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-nav hidden md:hidden border-t border-areia bg-linho/95 px-4 pb-4 pt-2 flex flex-col gap-1 text-sm font-medium" id="mobile-menu">
+      <a class="py-2 hover:text-caramelo" href="index.html" data-i18n="nav.inicio">Início</a>
+      <a class="py-2 hover:text-caramelo" href="index.html#amigurumi" data-i18n="nav.amigurumi" data-nav-categoria="amigurumi">Amigurumi</a>
+      <a class="py-2 hover:text-caramelo" href="index.html#bolsas" data-i18n="nav.bolsas" data-nav-categoria="bolsas">Bolsas</a>
+      <a class="py-2 hover:text-caramelo" href="index.html#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a class="py-2 hover:text-caramelo" href="#contato" data-i18n="nav.contato">Contato</a>
+      <a class="mt-2 inline-flex items-center justify-center gap-2 bg-caramelo text-white font-semibold px-4 py-2.5 rounded-full" href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda." data-i18n="nav.encomendar">Fazer Encomenda</a>
+      <div class="mt-4 flex items-center justify-center gap-5">
+        <a href="https://www.instagram.com/infioshandmade?stkn=YjBubHc0Y3c5bDhk&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" class="text-caramelo hover:text-espresso transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/351933127289" target="_blank" rel="noopener" aria-label="WhatsApp" class="text-caramelo hover:text-espresso transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.85 9.85 0 0 1-5-1.37l-.36-.21-3.72.98.99-3.62-.24-.37a9.74 9.74 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 0 1 6.97 2.89 9.8 9.8 0 0 1 2.88 6.97c0 5.43-4.42 9.86-9.85 9.86zm8.02-17.9A11.3 11.3 0 0 0 12.05 .1C5.8.1.7 5.19.7 11.45c0 2 .52 3.95 1.5 5.67L.6 23l6.03-1.58a11.36 11.36 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.34-11.35 0-3.03-1.18-5.88-3.33-8.05z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL (PDP) ===================== -->
+  <main class="flex-grow pt-24 sm:pt-28 pb-16 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- 1. BREADCRUMB -->
+      <nav aria-label="Breadcrumb" class="mb-6 sm:mb-8">
+        <ol class="flex items-center gap-2 text-xs sm:text-sm text-espresso/60 flex-wrap">
+          <li>
+            <a class="hover:text-caramelo transition-colors flex items-center gap-1.5 font-medium" href="index.html">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span data-i18n="nav.inicio">Início</span>
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-espresso/30">
+            <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </li>
+          <li>
+            <a id="breadcrumb-categoria" class="hover:text-caramelo transition-colors font-medium" href="index.html#amigurumi">Amigurumi</a>
+          </li>
+          <li aria-hidden="true" class="text-espresso/30">
+            <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </li>
+          <li aria-current="page" id="breadcrumb-atual" class="text-espresso font-semibold truncate max-w-[200px] sm:max-w-none">Produto</li>
+        </ol>
+      </nav>
+
+      <!-- 2. SEÇÃO PRINCIPAL DO PRODUTO -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <!-- COLUNA ESQUERDA: GALERIA DE FOTOS -->
+        <div class="lg:col-span-6 xl:col-span-6 space-y-4">
+          <div class="relative bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-borda shadow-craft overflow-hidden group">
+            <div id="main-frame" class="relative cursor-zoom-in">
+              <img alt="Produto LBM hand made" class="w-full h-auto object-contain rounded-xl sm:rounded-2xl transition-all duration-300" id="main-product-img" src="assets/images/logo.png" />
+              <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-espresso/60 shadow-sm pointer-events-none">
+                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line><line x1="11" x2="11" y1="8" y2="14"></line><line x1="8" x2="14" y1="11" y2="11"></line></svg>
+              </div>
+            </div>
+            <p class="pt-3 pb-1 text-center font-script text-xs sm:text-sm text-caramelo" data-i18n="pdp.galeriaLegenda">
+              amor, calma e dedicação em cada ponto
+            </p>
+          </div>
+
+          <div id="thumbs-list" class="flex items-center gap-3 overflow-x-auto pb-2 pt-1"></div>
+        </div>
+
+        <!-- COLUNA DIREITA: INFORMAÇÕES E AÇÃO -->
+        <div class="lg:col-span-6 xl:col-span-6 space-y-6">
+
+          <div class="border-b border-borda pb-6">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span id="pdp-badge"></span>
+            </div>
+            <h1 id="pdp-nome" class="text-3xl sm:text-4xl font-bold tracking-tight text-espresso leading-tight">Produto</h1>
+            <p id="pdp-subtitulo" class="font-script text-lg sm:text-xl text-caramelo mt-1 font-normal"></p>
+            <div class="mt-4 flex items-baseline gap-3">
+              <span id="pdp-preco" class="text-3xl sm:text-4xl font-extrabold text-espresso tracking-tight"></span>
+            </div>
+          </div>
+
+          <div id="pdp-descricao" class="space-y-3 text-sm sm:text-base text-espresso/80 leading-relaxed"></div>
+
+          <div class="bg-white rounded-2xl border border-borda p-5 shadow-sm space-y-4">
+            <h2 class="text-xs font-semibold uppercase tracking-wider text-espresso/60 flex items-center gap-2">
+              <svg class="text-caramelo" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span data-i18n="pdp.fichaTitulo">Ficha Técnica do Atelier</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              <div class="flex items-start gap-3 p-2.5 rounded-xl bg-linho/60 border border-areia/50">
+                <div class="w-8 h-8 rounded-lg bg-white border border-areia flex items-center justify-center shrink-0 text-caramelo">
+                  <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg>
+                </div>
+                <div>
+                  <span class="block text-[11px] font-semibold text-espresso/50 uppercase tracking-wide" data-i18n="pdp.dimensoesLabel">Dimensões Reais</span>
+                  <span id="pdp-dimensoes" class="text-xs sm:text-sm font-semibold text-espresso"></span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-2.5 rounded-xl bg-linho/60 border border-areia/50">
+                <div class="w-8 h-8 rounded-lg bg-white border border-areia flex items-center justify-center shrink-0 text-caramelo">
+                  <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                </div>
+                <div>
+                  <span class="block text-[11px] font-semibold text-espresso/50 uppercase tracking-wide" data-i18n="pdp.materialLabel">Material / Fio Nobre</span>
+                  <span id="pdp-material" class="text-xs sm:text-sm font-semibold text-espresso"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <a id="pdp-cta" class="w-full inline-flex items-center justify-center gap-3 bg-caramelo hover:bg-caramelo-hover active:bg-espresso text-white font-bold text-base sm:text-lg px-6 py-4 rounded-full shadow-craft hover:shadow-craft-lg transition-all transform active:scale-[0.99] text-center" href="https://wa.me/351933127289" rel="noopener" target="_blank">
+              <svg class="shrink-0" fill="currentColor" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.85 9.85 0 0 1-5-1.37l-.36-.21-3.72.98.99-3.62-.24-.37a9.74 9.74 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 0 1 6.97 2.89 9.8 9.8 0 0 1 2.88 6.97c0 5.43-4.42 9.86-9.85 9.86zm8.02-17.9A11.3 11.3 0 0 0 12.05 .1C5.8.1.7 5.19.7 11.45c0 2 .52 3.95 1.5 5.67L.6 23l6.03-1.58a11.36 11.36 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.34-11.35 0-3.03-1.18-5.88-3.33-8.05z"></path>
+              </svg>
+              <span data-i18n="pdp.ctaReservar">Reservar esta peça no WhatsApp</span>
+            </a>
+            <p class="text-center text-xs text-espresso/60 flex items-center justify-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full bg-verde"></span>
+              <span data-i18n="pdp.atendimento">Atendimento atencioso direto com a artesã · Resposta rápida</span>
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white border border-areia p-4 flex items-start gap-3.5">
+            <div class="p-2 rounded-xl bg-linho border border-areia text-caramelo shrink-0">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <div class="text-xs sm:text-sm text-espresso/75 leading-relaxed">
+              <p class="font-semibold text-espresso" data-i18n="pdp.cttTitulo">
+                Envios CTT Registado para Portugal Continental & Ilhas
+              </p>
+              <p class="mt-0.5 text-xs text-espresso/65" data-i18n="pdp.cttTexto">
+                Despachado em até 24h úteis numa caixa acolhedora com saquinho de linho puro perfumado e código de rastreio nacional CTT. Também enviamos para toda a Europa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SEÇÃO "OUTRAS PEÇAS EXCLUSIVAS" -->
+      <section class="mt-20 pt-12 border-t border-borda">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-caramelo" data-i18n="pdp.exploreLabel">EXPLORE A COLEÇÃO</span>
+            <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-espresso mt-1" data-i18n="pdp.outrasPecas">Outras Peças Exclusivas</h3>
+          </div>
+        </div>
+        <div id="cross-sell-list" class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===================== RODAPÉ (Fiel ao site original) ===================== -->
+  <footer class="py-14 px-4 sm:px-6 border-t border-areia bg-white/50 mt-auto" id="contato">
+    <div class="max-w-6xl mx-auto grid gap-10 sm:grid-cols-3">
+      <div>
+        <a href="index.html" class="flex flex-col items-start leading-none">
+          <span class="font-script text-2xl text-espresso">LBM</span>
+          <span class="text-[10px] tracking-tight text-espresso/60 italic -mt-0.5">- hand made -</span>
+        </a>
+        <p class="mt-4 text-sm text-espresso/60 max-w-xs leading-relaxed" data-i18n="rodape.descricao">Peças artesanais em crochê e fio de malha, feitas com dedicação em Portugal.</p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-espresso/50" data-i18n="rodape.contato">Contato</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>
+            <a href="https://wa.me/351933127289" class="inline-flex items-center gap-2 text-espresso/70 hover:text-caramelo transition-colors font-medium" rel="noopener" target="_blank">
+              <svg fill="currentColor" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.85 9.85 0 0 1-5-1.37l-.36-.21-3.72.98.99-3.62-.24-.37a9.74 9.74 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 0 1 6.97 2.89 9.8 9.8 0 0 1 2.88 6.97c0 5.43-4.42 9.86-9.85 9.86zm8.02-17.9A11.3 11.3 0 0 0 12.05 .1C5.8.1.7 5.19.7 11.45c0 2 .52 3.95 1.5 5.67L.6 23l6.03-1.58a11.36 11.36 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.34-11.35 0-3.03-1.18-5.88-3.33-8.05z"></path></svg>
+              <span>+351 933 127 289</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/infioshandmade?stkn=YjBubHc0Y3c5bDhk&utm_source=qr" class="inline-flex items-center gap-2 text-espresso/70 hover:text-caramelo transition-colors font-medium" rel="noopener" target="_blank">
+              <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              <span>@infioshandmade</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-espresso/50" data-i18n="rodape.localizacao">Onde estamos</h3>
+        <p class="mt-4 text-sm text-espresso/70 flex items-start gap-2">
+          <svg class="mt-0.5 shrink-0 text-caramelo" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span data-i18n="rodape.localizacaoTexto">Portugal · Envio para todo o país</span>
+        </p>
+      </div>
+    </div>
+    <p class="mt-12 text-center text-xs text-espresso/40" data-i18n="rodape.direitos">© 2026 LBM hand made. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="produto.js"></script>
+
+  <!-- ===================== MODAL LIGHTBOX (Zoom de imagem) ===================== -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <button id="lightbox-close" aria-label="Fechar" class="absolute top-4 right-4 z-10 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 transition-colors rounded-full p-2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+    </button>
+    <img id="lightbox-img" src="assets/images/logo.png" alt="Imagem ampliada da peça" class="max-h-full max-w-full rounded-2xl shadow-craft-lg object-contain" />
+  </div>
+</body>
+</html>
