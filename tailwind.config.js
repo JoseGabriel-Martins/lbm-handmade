@@ -13,6 +13,7 @@ tailwind.config = {
       },
       fontFamily: {
         script: ['"Pacifico"', 'cursive'],
+        serif: ['"Fraunces"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {

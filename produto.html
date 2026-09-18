@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -98,20 +98,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
         <!-- COLUNA ESQUERDA: GALERIA DE FOTOS -->
-        <div class="lg:col-span-6 xl:col-span-6 space-y-4">
-          <div class="relative bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-borda shadow-craft overflow-hidden group">
-            <div id="main-frame" class="relative cursor-zoom-in">
-              <img alt="Produto LBM hand made" class="w-full h-auto object-contain rounded-xl sm:rounded-2xl transition-all duration-300" id="main-product-img" src="assets/images/logo.png" />
-              <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-espresso/60 shadow-sm pointer-events-none">
-                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line><line x1="11" x2="11" y1="8" y2="14"></line><line x1="8" x2="14" y1="11" y2="11"></line></svg>
-              </div>
+        <div class="lg:col-span-6 xl:col-span-6">
+          <div id="main-frame" class="max-w-md mx-auto aspect-[3/4] max-h-[500px] w-full rounded-2xl overflow-hidden bg-[#F7F4F0] border border-espresso/10 flex items-center justify-center relative cursor-zoom-in">
+            <img alt="Produto LBM hand made" class="w-full h-full object-cover object-center rounded-2xl transition-opacity duration-300" id="main-product-img" src="assets/images/logo.png" onerror="this.onerror=null; this.src='assets/images/logo.png';" />
+            <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-espresso/60 shadow-sm pointer-events-none">
+              <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line><line x1="11" x2="11" y1="8" y2="14"></line><line x1="8" x2="14" y1="11" y2="11"></line></svg>
             </div>
-            <p class="pt-3 pb-1 text-center font-script text-xs sm:text-sm text-caramelo" data-i18n="pdp.galeriaLegenda">
-              amor, calma e dedicação em cada ponto
-            </p>
           </div>
 
-          <div id="thumbs-list" class="flex items-center gap-3 overflow-x-auto pb-2 pt-1"></div>
+          <div id="thumbs-list" class="max-w-md mx-auto mt-3 flex gap-3 overflow-x-auto pb-2"></div>
         </div>
 
         <!-- COLUNA DIREITA: INFORMAÇÕES E AÇÃO -->
@@ -121,7 +116,7 @@
             <div class="flex items-center gap-2 mb-2.5">
               <span id="pdp-badge"></span>
             </div>
-            <h1 id="pdp-nome" class="text-3xl sm:text-4xl font-bold tracking-tight text-espresso leading-tight">Produto</h1>
+            <h1 id="pdp-nome" class="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-espresso leading-tight">Produto</h1>
             <p id="pdp-subtitulo" class="font-script text-lg sm:text-xl text-caramelo mt-1 font-normal"></p>
             <div class="mt-4 flex items-baseline gap-3">
               <span id="pdp-preco" class="text-3xl sm:text-4xl font-extrabold text-espresso tracking-tight"></span>
@@ -193,7 +188,7 @@
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
           <div>
             <span class="text-xs font-semibold uppercase tracking-wider text-caramelo" data-i18n="pdp.exploreLabel">EXPLORE A COLEÇÃO</span>
-            <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-espresso mt-1" data-i18n="pdp.outrasPecas">Outras Peças Exclusivas</h3>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold tracking-tight text-espresso mt-1" data-i18n="pdp.outrasPecas">Outras Peças Exclusivas</h3>
           </div>
         </div>
         <div id="cross-sell-list" class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0"></div>

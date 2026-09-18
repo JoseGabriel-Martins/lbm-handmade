@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -73,38 +73,35 @@
   </header>
 
   <main id="inicio">
-    <!-- ===================== HERO ===================== -->
-    <section class="pt-24 sm:pt-32 pb-14 px-4 sm:px-6">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div>
-<span class="inline-flex items-center gap-2 text-xs font-medium text-caramelo bg-caramelo/10 px-3 py-1.5 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5c2 0 3.5 1.2 4.5 2.5C11 6.2 12.5 5 14.5 5 18 5 19.5 9 17.5 12.5 15 16.65 12 21 12 21z"/></svg>
-              <span data-i18n="hero.badge">100% Feito à Mão em Portugal</span>
-            </span>
+    <!-- ===================== HERO (Banner Imersivo) ===================== -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-6 mt-6">
+      <div class="relative rounded-3xl overflow-hidden min-h-[440px] md:min-h-[500px] flex items-center justify-center text-center shadow-sm">
+        <!-- Imagem de fundo do ateliê -->
+        <img src="assets/images/amigurumi/kirby.jpeg" alt="Ateliê LBM hand made" class="absolute inset-0 w-full h-full object-cover" />
+        <!-- Overlay escuro para contraste e legibilidade -->
+        <div class="absolute inset-0 bg-espresso/50 backdrop-blur-[1px]"></div>
 
-            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-semibold tracking-tight">
-              <span data-i18n="hero.titulo1">Ponto a ponto,</span><br />
-              <span class="font-script font-normal text-caramelo" data-i18n="hero.titulo2">feito com afeto</span>
-            </h1>
+        <!-- Conteúdo sobreposto -->
+        <div class="relative z-10 px-6 py-12 sm:py-16">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-white/90 text-xs tracking-wider border border-white/20 uppercase mb-4">
+            ♡ <span data-i18n="hero.badge">Peças Exclusivas & Autorais</span>
+          </span>
 
-            <p class="mt-5 text-base sm:text-lg text-espresso/70 leading-relaxed max-w-md" data-i18n="hero.descricao">
-              Amigurumi colecionáveis e bolsas de fio de malha, feitos um por um à mão.
-              Cada peça carrega dedicação, materiais escolhidos e cores feitas para você.
-            </p>
+          <h1 class="mt-5 text-white text-3xl sm:text-5xl md:text-6xl font-serif font-medium leading-tight max-w-2xl mx-auto drop-shadow-sm">
+            <span data-i18n="hero.titulo1">Ponto a ponto,</span>
+            <span class="font-script font-normal text-[#E8C9AF]" data-i18n="hero.titulo2">feito com afeto</span>
+          </h1>
 
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#amigurumi" class="inline-flex items-center gap-2 bg-espresso text-white font-semibold px-6 py-3 rounded-full hover:bg-caramelo transition-colors" data-i18n="hero.ctaColecao">Ver Coleção</a>
-              <a href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20peças." class="inline-flex items-center gap-2 border border-areia bg-white font-semibold px-6 py-3 rounded-full hover:border-caramelo hover:text-caramelo transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.85 9.85 0 0 1-5-1.37l-.36-.21-3.72.98.99-3.62-.24-.37a9.74 9.74 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 0 1 6.97 2.89 9.8 9.8 0 0 1 2.88 6.97c0 5.43-4.42 9.86-9.85 9.86zm8.02-17.9A11.3 11.3 0 0 0 12.05 .1C5.8.1.7 5.19.7 11.45c0 2 .52 3.95 1.5 5.67L.6 23l6.03-1.58a11.36 11.36 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.34-11.35 0-3.03-1.18-5.88-3.33-8.05z"/></svg>
-                <span data-i18n="hero.ctaWhatsapp">WhatsApp</span>
-              </a>
-            </div>
-        </div>
+          <p class="text-white/85 text-sm sm:text-base max-w-xl mx-auto mt-4 mb-8 font-light" data-i18n="hero.descricao">
+            Amigurumi colecionáveis e bolsas de fio de malha, feitos um por um à mão em Portugal. Cada peça carrega dedicação, materiais escolhidos e cores feitas para você.
+          </p>
 
-        <div class="relative">
-          <div class="rounded-3xl border border-areia bg-white p-3 shadow-md rotate-1">
-            <img src="assets/images/amigurumi/kirby.jpeg" alt="Amigurumi Kirby feito à mão" class="rounded-2xl aspect-[4/5] object-cover w-full" />
-            <p class="pt-3 pb-1 text-center font-script text-espresso/80" data-i18n="hero.legenda">amor em cada ponto</p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="#amigurumi" class="inline-flex items-center bg-white hover:bg-white/90 text-espresso font-semibold px-6 py-3 rounded-full shadow-md transition" data-i18n="hero.ctaColecao">Ver Coleção</a>
+            <a href="https://wa.me/351933127289?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20peças." class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md px-6 py-3 rounded-full transition font-semibold">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.85 9.85 0 0 1-5-1.37l-.36-.21-3.72.98.99-3.62-.24-.37a9.74 9.74 0 0 1-1.5-5.2c0-5.43 4.42-9.85 9.86-9.85a9.8 9.8 0 0 1 6.97 2.89 9.8 9.8 0 0 1 2.88 6.97c0 5.43-4.42 9.86-9.85 9.86zm8.02-17.9A11.3 11.3 0 0 0 12.05 .1C5.8.1.7 5.19.7 11.45c0 2 .52 3.95 1.5 5.67L.6 23l6.03-1.58a11.36 11.36 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.34-11.35 0-3.03-1.18-5.88-3.33-8.05z"/></svg>
+              <span data-i18n="hero.ctaWhatsapp">Reservar no WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
@@ -115,14 +112,19 @@
       <div class="max-w-6xl mx-auto">
         <div class="flex items-end justify-between mb-8">
           <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight"><span data-i18n="amigurumi.titulo">Amigurumi</span> <span class="font-script font-normal text-caramelo" data-i18n="amigurumi.tituloScript">& Geek</span></h2>
+            <h2 class="text-3xl sm:text-4xl font-serif font-semibold tracking-tight"><span data-i18n="amigurumi.titulo">Amigurumi</span> <span class="font-script font-normal text-caramelo" data-i18n="amigurumi.tituloScript">& Geek</span></h2>
             <p class="mt-2 text-espresso/60" data-i18n="amigurumi.descricao">Personagens colecionáveis da cultura pop, feitos à mão com fios macios.</p>
           </div>
-          <div class="hidden sm:flex gap-2" id="amigurumi-nav"></div>
+          <div class="hidden md:flex gap-2" id="amigurumi-nav"></div>
         </div>
 
         <div class="swiper amigurumi-swiper overflow-hidden pb-2">
           <div class="swiper-wrapper" id="amigurumi-list"></div>
+        </div>
+        <div class="md:hidden flex justify-center mt-5">
+          <span id="amigurumi-counter" class="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-espresso/60 bg-white border border-areia px-3 py-1.5 rounded-full shadow-sm">
+            <span class="current">01</span><span class="text-espresso/30">/</span><span class="total">04</span>
+          </span>
         </div>
       </div>
     </section>
@@ -132,14 +134,19 @@
       <div class="max-w-6xl mx-auto">
         <div class="flex items-end justify-between mb-8">
           <div>
-            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight"><span data-i18n="bolsas.titulo">Bolsas</span> <span class="font-script font-normal text-caramelo" data-i18n="bolsas.tituloScript">& Acessórios</span></h2>
+            <h2 class="text-3xl sm:text-4xl font-serif font-semibold tracking-tight"><span data-i18n="bolsas.titulo">Bolsas</span> <span class="font-script font-normal text-caramelo" data-i18n="bolsas.tituloScript">& Acessórios</span></h2>
             <p class="mt-2 text-espresso/60" data-i18n="bolsas.descricao">Peças sofisticadas em fio de malha e crochê estruturado.</p>
           </div>
-          <div class="hidden sm:flex gap-2" id="bolsas-nav"></div>
+          <div class="hidden md:flex gap-2" id="bolsas-nav"></div>
         </div>
 
         <div class="swiper bolsas-swiper overflow-hidden pb-2">
           <div class="swiper-wrapper" id="bolsas-list"></div>
+        </div>
+        <div class="md:hidden flex justify-center mt-5">
+          <span id="bolsas-counter" class="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wider text-espresso/60 bg-white border border-areia px-3 py-1.5 rounded-full shadow-sm">
+            <span class="current">01</span><span class="text-espresso/30">/</span><span class="total">04</span>
+          </span>
         </div>
       </div>
     </section>
@@ -147,7 +154,7 @@
     <!-- ===================== SOBRE ===================== -->
     <section id="sobre" class="py-20 px-4 sm:px-6">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight"><span data-i18n="sobre.titulo1">Sobre o</span> <span class="font-script font-normal text-caramelo" data-i18n="sobre.titulo2">Ateliê</span></h2>
+        <h2 class="text-3xl sm:text-4xl font-serif font-semibold tracking-tight"><span data-i18n="sobre.titulo1">Sobre o</span> <span class="font-script font-normal text-caramelo" data-i18n="sobre.titulo2">Ateliê</span></h2>
         <p class="mt-6 text-base sm:text-lg text-espresso/70 leading-relaxed" data-i18n="sobre.texto">
           Cada peça da LBM nasce do processo manual, ponto a ponto, sem pressa e sem atalhos.
           Escolhemos fios selecionados, cuidamos do acabamento e personalizamos as cores
@@ -160,23 +167,23 @@
     <!-- ===================== COMO ENCOMENDAR ===================== -->
     <section id="encomendar" class="py-16 px-4 sm:px-6 bg-espresso text-linho">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-center text-3xl sm:text-4xl font-semibold tracking-tight" data-i18n="encomendar.titulo">Como encomendar</h2>
+        <h2 class="text-center text-3xl sm:text-4xl font-serif font-semibold tracking-tight" data-i18n="encomendar.titulo">Como encomendar</h2>
         <p class="mt-3 text-center text-linho/70" data-i18n="encomendar.subtitulo">Envio pelos CTT para todo o país.</p>
 
         <div class="mt-12 grid sm:grid-cols-3 gap-8">
           <div class="text-center sm:text-left">
             <span class="font-script text-caramelo text-2xl">1</span>
-            <h3 class="mt-3 text-lg font-semibold" data-i18n="encomendar.passo1Titulo">Escolha a peça</h3>
+            <h3 class="mt-3 text-lg font-serif font-semibold" data-i18n="encomendar.passo1Titulo">Escolha a peça</h3>
             <p class="mt-2 text-linho/70 text-sm leading-relaxed" data-i18n="encomendar.passo1Texto">Navegue pelo catálogo e encontre a peça que fala consigo.</p>
           </div>
           <div class="text-center sm:text-left">
             <span class="font-script text-caramelo text-2xl">2</span>
-            <h3 class="mt-3 text-lg font-semibold" data-i18n="encomendar.passo2Titulo">Combine no WhatsApp</h3>
+            <h3 class="mt-3 text-lg font-serif font-semibold" data-i18n="encomendar.passo2Titulo">Combine no WhatsApp</h3>
             <p class="mt-2 text-linho/70 text-sm leading-relaxed" data-i18n="encomendar.passo2Texto">Ajustamos cores, tamanhos e detalhes da forma que desejar.</p>
           </div>
           <div class="text-center sm:text-left">
             <span class="font-script text-caramelo text-2xl">3</span>
-            <h3 class="mt-3 text-lg font-semibold" data-i18n="encomendar.passo3Titulo">Envio pelos CTT</h3>
+            <h3 class="mt-3 text-lg font-serif font-semibold" data-i18n="encomendar.passo3Titulo">Envio pelos CTT</h3>
             <p class="mt-2 text-linho/70 text-sm leading-relaxed" data-i18n="encomendar.passo3Texto">Receba em casa, em qualquer ponto de Portugal.</p>
           </div>
         </div>

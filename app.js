@@ -16,15 +16,15 @@ function cardTemplate(produto) {
 
   return `
     <article class="swiper-slide group h-auto">
-      <div class="relative bg-white border border-areia rounded-3xl overflow-hidden shadow-sm h-full flex flex-col">
-        <div class="relative aspect-[4/5] overflow-hidden">
+      <div class="relative bg-white border border-espresso/10 rounded-2xl overflow-hidden shadow-sm h-full flex flex-col">
+        <div class="relative aspect-square overflow-hidden">
           <img src="${produto.imagem}" alt="${nome}" loading="lazy"
                onerror="this.onerror=null; this.src='${IMAGEM_FALLBACK}';"
-               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+               class="w-full aspect-square object-cover rounded-t-2xl group-hover:scale-105 transition-transform duration-300" />
           <div class="absolute top-3 left-3">${badgeFor()}</div>
         </div>
         <div class="p-4 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg">
+          <h3 class="font-serif font-semibold text-lg">
             <a href="${pdp}" class="after:absolute after:inset-0 group-hover:text-caramelo transition-colors">${nome}</a>
           </h3>
           <p class="mt-1 mb-auto min-h-[2.75rem] text-xs sm:text-sm text-espresso/60 leading-relaxed flex items-start">${material}</p>
@@ -48,8 +48,19 @@ function navArrowButtons(prefix) {
     </button>`;
 }
 
+function pad2(n) {
+  return String(n).padStart(2, '0');
+}
+
 let amigurumiSwiper;
 let bolsasSwiper;
+
+function updateCounter(id, swiper) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.querySelector('.current').textContent = pad2(swiper.activeIndex + 1);
+  el.querySelector('.total').textContent = pad2(swiper.slides.length);
+}
 
 function initSwiper() {
   if (amigurumiSwiper) {
@@ -66,6 +77,10 @@ function initSwiper() {
       1024: { slidesPerView: 3, spaceBetween: 24 },
       1280: { slidesPerView: 4, spaceBetween: 24 },
     },
+    on: {
+      init: (sw) => updateCounter('amigurumi-counter', sw),
+      slideChange: (sw) => updateCounter('amigurumi-counter', sw),
+    },
   });
 
   bolsasSwiper = new Swiper('.bolsas-swiper', {
@@ -76,6 +91,10 @@ function initSwiper() {
       640: { slidesPerView: 2, spaceBetween: 20 },
       1024: { slidesPerView: 3, spaceBetween: 24 },
       1280: { slidesPerView: 4, spaceBetween: 24 },
+    },
+    on: {
+      init: (sw) => updateCounter('bolsas-counter', sw),
+      slideChange: (sw) => updateCounter('bolsas-counter', sw),
     },
   });
 }

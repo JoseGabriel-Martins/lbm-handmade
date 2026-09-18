@@ -65,15 +65,15 @@ function crossSellCard(p) {
   const pdp = `produto.html?id=${p.id}`;
 
   return `
-    <article class="bg-white rounded-2xl border border-borda p-4 shadow-craft hover:shadow-craft-lg transition-all flex flex-col group min-w-[78vw] sm:min-w-[320px] snap-center md:min-w-0 md:snap-align-none md:shrink">
-      <a href="${pdp}" class="block relative aspect-square rounded-xl overflow-hidden bg-linho mb-4">
-        <img alt="${nome}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="${p.imagem}" loading="lazy"
+    <article class="bg-white rounded-2xl border border-espresso/10 shadow-craft hover:shadow-craft-lg transition-all flex flex-col group overflow-hidden min-w-[78vw] sm:min-w-[320px] snap-center md:min-w-0 md:snap-align-none md:shrink">
+      <a href="${pdp}" class="block relative aspect-square overflow-hidden">
+        <img alt="${nome}" class="w-full aspect-square object-cover rounded-t-2xl group-hover:scale-105 transition-transform duration-300" src="${p.imagem}" loading="lazy"
              onerror="this.onerror=null; this.src='${IMAGEM_FALLBACK}';" />
         <span class="absolute top-3 left-3 bg-caramelo text-white text-[10px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">${t('badge.pecaUnica')}</span>
       </a>
-      <div class="flex-grow flex flex-col justify-between">
+      <div class="flex-grow flex flex-col justify-between p-4">
         <div>
-          <h4 class="font-bold text-espresso text-base sm:text-lg group-hover:text-caramelo transition-colors">
+          <h4 class="font-serif font-bold text-espresso text-base sm:text-lg group-hover:text-caramelo transition-colors">
             <a href="${pdp}">${nome}</a>
           </h4>
           <p class="text-xs text-espresso/60 mt-1 line-clamp-2">${material}</p>
