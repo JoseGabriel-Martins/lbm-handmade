@@ -24,7 +24,7 @@ function cardTemplate(produto) {
           <div class="absolute top-3 left-3">${badgeFor()}</div>
         </div>
         <div class="p-4 flex flex-col flex-grow">
-          <h3 class="font-serif font-semibold text-lg">
+          <h3 class="font-serif text-lg text-[#2D1F17] font-medium">
             <a href="${pdp}" class="after:absolute after:inset-0 group-hover:text-caramelo transition-colors">${nome}</a>
           </h3>
           <p class="mt-1 mb-auto min-h-[2.75rem] text-xs sm:text-sm text-espresso/60 leading-relaxed flex items-start">${material}</p>

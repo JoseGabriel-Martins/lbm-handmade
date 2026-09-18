@@ -73,7 +73,7 @@ function crossSellCard(p) {
       </a>
       <div class="flex-grow flex flex-col justify-between p-4">
         <div>
-          <h4 class="font-serif font-bold text-espresso text-base sm:text-lg group-hover:text-caramelo transition-colors">
+          <h4 class="font-serif text-lg text-[#2D1F17] font-medium group-hover:text-caramelo transition-colors">
             <a href="${pdp}">${nome}</a>
           </h4>
           <p class="text-xs text-espresso/60 mt-1 line-clamp-2">${material}</p>
